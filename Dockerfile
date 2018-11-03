@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -y \
       && rm -rf /var/lib/apt/lists/*
 
 # Install Qt
-RUN wget https://download.qt.io/archive/qt/${QT_MAJOR_VERSION}/${QT_FULL_VERSION}/qt-opensource-linux-x64-${QT_FULL_VERSION}.run && \
+RUN wget -q https://download.qt.io/archive/qt/${QT_MAJOR_VERSION}/${QT_FULL_VERSION}/qt-opensource-linux-x64-${QT_FULL_VERSION}.run && \
       chmod +x qt-opensource-linux-x64-${QT_FULL_VERSION}.run
 
 # Copy Qt installer script into the container
